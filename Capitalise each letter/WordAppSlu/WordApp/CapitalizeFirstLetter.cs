@@ -1,0 +1,34 @@
+﻿using System;
+
+namespace WordApp
+{
+    class CapitalizeFirstLetter
+    {
+        public static void Main()
+        {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.BackgroundColor = ConsoleColor.Blue;
+
+            string ChuckJoke = "when chuck norris says he is sorry, its not for what he has done, but for what he is about to do to you.";
+            string CapitilizeFirstLetterInEachWord = "";
+            string[] Sentence = ChuckJoke.Split(" ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+
+            foreach (string Letter in Sentence)/*D-M4N*/
+            {
+                char[] word = Letter.ToCharArray();
+                word[0] = char.ToUpper(word[0]);
+                CapitilizeFirstLetterInEachWord += new string(word) + " ";
+            }
+
+                Console.WriteLine(CapitilizeFirstLetterInEachWord);            
+                Console.WriteLine();
+
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            string tag = "$ 😎 D-M4N 😎 $";
+            Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (tag.Length / 2)) + "}", tag));
+            Console.Read();
+        }
+    }
+}
